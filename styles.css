@@ -74,7 +74,7 @@ input {
 }
 
 input:focus {
-  transform: : scale(1.1);
+  transform: scale(1.1);
   border: 2px solid #ef233c;
 }
 
