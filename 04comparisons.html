@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting started with Java Script</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+<style>
+  body {padding: 30px;}
+</style>
+</head>
+<body>
+
+<!---start javascript-->
+<script>
+const original = 'Royce';
+const clone = 'ROYCE';
+
+console.groupCollapsed ('string');
+  console.log(original == clone);// will be false, JS is case sensitive in comparisons
+  console.log(original == 'Royce');// will be true obviously
+  console.log(original == clone.toLowerCase());// should be true? not sure how to correct 
+console.groupEnd();
+
+const num1=10;
+const num2= '10';
+console.groupCollapsed('Numbers');
+console.log(num1 == num2);// is true because the number 10 is equal to a string with a value of 10, thanks to coersion. Works with double == signs, allows for coersion, === means they are equal and the type is the same, so no coersion. Example below
+console.log(num1 === num2);//false
+
+console.log(num1 != num2);// false, the != means not equal to.
+console.groupEnd();
+
+let what;//undefined
+let thing=null;
+
+
+console.groupCollapsed ('Booleans');
+console.log(Boolean(what));//False
+console.log(Boolean(thing));//False
+console.log(Boolean(num1));//true
+console.log(Boolean(num2));//true
+console.log(Boolean({}));//true, in JS an empty object will evaluate to be true 
+console.log(Boolean([]));//true, in JS an empty array will also evaluate to be true
+console.groupEnd();
+
+const firstArr = [1, 2,3,];
+const secondArr = [1, 2,3,];
+const firstObj = {color: 'red'};
+const secondObj = {color : 'red'};
+
+console.groupCollapsed ('Objects and Arrays');
+console.log (firstArr==secondArr);//false- objects with ths same keys and values will not be equal to an object with the same keys and values
+console.log (firstObj==secondObj);//false- same a above
+console.groupEnd ();
+
+console.group ('And Or');
+console.log(Boolean('blah')&& Boolean('thing'));//True-Not sure why
+console.log(Boolean('blah')&& Boolean(''));//FALSE-again not sure why
+console.log(Boolean('blah')|| Boolean(''));//true, and I dont know why the|| means 'or'
+
+
+
+
+
+
+
+
+console.groupEnd ();
+
+</script>
+</body>
+</html>
