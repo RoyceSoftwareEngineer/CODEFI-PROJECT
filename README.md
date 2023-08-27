@@ -1,3 +1,3 @@
 # CODEFI-PROJECTS
 sample html, java script, and css code
-Created project as work sample for application for scholarship into codefi full stack developer 10 month bootcamp. 
+projects created while participating in Codefi full stack developer program.
